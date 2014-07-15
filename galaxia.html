@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Write your own credits</title>
+	<meta charset="utf-8"/>
+
+	<style>
+	*{margin:0;padding: 0;}
+
+	@font-face {
+    font-family: 'DistantGalaxyRegular';
+    src: url('DISTGRG_-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+	}
+
+
+	body{ 
+	width:100%; height: 100%;	
+	background:black url("http://csstarwars.s3.amazonaws.com/background.png");
+	font-family: arial;
+	font-size: 1em;
+	color:#fee854;
+	overflow:hidden;
+	}
+
+	div#wraper{
+	width:60%;
+	margin:50px auto;
+	}
+
+	div#far_away{
+	font-weight: bold;
+	color:#50d7f0;
+	}
+
+	p#instructions{
+	display: inline-block;
+	margin:10px 0 0 50px;
+	font-weight: bold;
+	color:lightyellow;
+	}
+
+	h1{
+	font-family:"DistantGalaxyRegular", arial;
+	text-align: center;
+	outline: none;
+	}
+
+	div#credits{
+	outline:none;
+	}
+
+	div#credits div#parrafos{
+	position: relative;
+
+	}
+
+	p#episode{
+	margin-bottom: 30px;
+	}
+
+	div#parrafos p{
+	text-align: center;
+	line-height: 1.5em;
+	}
+
+	ul{
+		margin:30px 0 0 50px;
+		text-decoration: none;
+	}
+
+	ul li{display: inline-block;}
+
+	button{
+		padding: 8px 30px;
+		background: #fefcea; /* Old browsers */
+		background: -moz-linear-gradient(top, #fefcea 0%, #f1da36 29%, #f1da36 79%, #ffffff 100%); /* FF3.6+ */
+		background: -webkit-linear-gradient(top, #fefcea 0%,#f1da36 29%, #f1da36 79%, #ffffff 100%); /* Chrome10+,Safari5.1+ */
+		border-radius: 3px;
+		font-family:"DistantGalaxyRegular", arial;
+		font-size: 1em;
+	}
+
+	</style>
+
+</head>
+
+<body>
+	<ul>
+		<li><button onclick="LoadCSS('galaxias')">PLAY</button></li>
+		<li><button onclick="LoadCSS('galaxias'); original()">ORIGINAL CREDITS</button></li>
+		<li><button onclick="location.reload()" id="reset">RESET</button></li>
+	</ul>
+	<p id="instructions">You can edit you own title, episode and credits. Click and write.</p>
+	<div id="wraper">
+		<div id="far_away">
+			<p>A long time ago in a galaxy far,</p>
+			<p>far away....</p>
+		</div>
+
+		<h1 id="h1" contenteditable="true" spellcheck="false">DANIEL<br/>BARBERO</h1>
+
+		<div id="credits" contenteditable="true" spellcheck="false">
+			<div id="parrafos" onmouseover="sizeP()" onmouseout="restaurar()">		
+				<p id="episode">Episode 1</p>
+				<p id="p_one">Once upon a time,</p>
+				<p id="p_two">in a very distant land....</p>
+				<p id="p_three">[rewrite your own credits]</p>
+			</div>
+		</div>
+	</div>
+
+
+	<script type="text/javascript" src="galaxia.js"></script>
+
+
+</body>
+</html>
